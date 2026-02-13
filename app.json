@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "slug": "expo-app",
+    "extra": {
+      "eas": {
+        "projectId": "28a48e46-653b-4dd0-9617-05fce09d57b1"
+      }
+    }
+  }
+}

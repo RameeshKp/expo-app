@@ -18,6 +18,10 @@ expo-env.d.ts
 *.mobileprovision
 ios/
 android/
+credentials.json
+credentials-*.json
+*.keystore
+keystores/
 
 # Metro
 .metro-health-check*
@@ -39,23 +43,3 @@ yarn-error.*
 
 # Firebase
 /firebase
-
-
-.env.local
-credentials.json
-keystores/
-credentials.json
-credentials-google-play.json
-credentials-solana.json
-keystores/
-google-play-keystore.jks
-solana-release-keystore.jks
-credentials-google-play.json
-credentials-solana.json
-credentials.json
-keystores/
-*.jks
-credentials.json
-credentials-google-play.json
-credentials-solana.json
-keystores/
