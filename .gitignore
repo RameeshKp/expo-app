@@ -1,0 +1,61 @@
+# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
+
+# dependencies
+node_modules/
+
+# Expo
+.expo/
+dist/
+web-build/
+expo-env.d.ts
+
+# Native
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+ios/
+android/
+
+# Metro
+.metro-health-check*
+
+# debug
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# macOS
+.DS_Store
+*.pem
+
+# local env files
+.env*.local
+
+# typescript
+*.tsbuildinfo
+
+# Firebase
+/firebase
+
+
+.env.local
+credentials.json
+keystores/
+credentials.json
+credentials-google-play.json
+credentials-solana.json
+keystores/
+google-play-keystore.jks
+solana-release-keystore.jks
+credentials-google-play.json
+credentials-solana.json
+credentials.json
+keystores/
+*.jks
+credentials.json
+credentials-google-play.json
+credentials-solana.json
+keystores/
