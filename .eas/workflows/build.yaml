@@ -8,46 +8,14 @@ on:
 jobs:
   play-store-build:
     name: Build for Google Play Store
-    steps:
-      - name: Checkout repository
-        uses: expo/checkout@v1
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Inject Play Store Keystore
-        run: |
-          if [ -n "$PLAY_STORE_KEYSTORE_BASE64" ]; then
-            echo "$PLAY_STORE_KEYSTORE_BASE64" | base64 --decode > play-store.jks
-            echo "$PLAY_STORE_CREDENTIALS_JSON" > credentials.json
-          fi
-
-      - name: Build Android
-        uses: expo/build@v1
-        with:
-          platform: android
-          profile: production
-          message: "Play Store build from EAS Workflow"
+    type: build
+    params:
+      platform: android
+      profile: production
 
   solana-build:
     name: Build for Solana App Store
-    steps:
-      - name: Checkout repository
-        uses: expo/checkout@v1
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Inject Solana Keystore
-        run: |
-          if [ -n "$SOLANA_KEYSTORE_BASE64" ]; then
-            echo "$SOLANA_KEYSTORE_BASE64" | base64 --decode > solana.jks
-            echo "$SOLANA_CREDENTIALS_JSON" > credentials.json
-          fi
-
-      - name: Build Android
-        uses: expo/build@v1
-        with:
-          platform: android
-          profile: solana
-          message: "Solana build from EAS Workflow"
+    type: build
+    params:
+      platform: android
+      profile: solana
